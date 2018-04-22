@@ -1,9 +1,8 @@
 import "bulma/css/bulma.css";
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, } from "react-router-dom";
 import About from "./components/About";
-import NoMatch from "./components/NoMatch";
 import Score from "./components/Score";
 import Quiz from "./components/Quiz";
 
