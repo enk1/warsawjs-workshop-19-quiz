@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 //import FontAwesome from 'react-fontawesome';
 import './Quiz.css';
+import Question from './Question';
+import ProgressBar from "./ProgressBar";
 
 class Quiz extends Component {
     render() {
+        const questionNumber = this.props.match.params.questionNumber;
+
         return (
             <div className="columns">
                 <div className="column is-12">
@@ -22,43 +26,8 @@ class Quiz extends Component {
                         </section>
                     </div>
                     
-                    <div className="container">
-                        <nav className="panel">
-                            <p className="panel-heading">
-                                Jaki znacznik odpowiada za pogrubienie tekstu?
-                            </p>
+                    <Question questions={questionNumber}/>
                     
-                            <a className="panel-block is-active">
-                                <span className="panel-icon">
-                                <i className="far fa-circle" aria-hidden="true"></i>
-                                </span>
-                                &lt;li&gt; 
-                            </a>
-                            <a className="panel-block is-active">
-                                <span className="panel-icon">
-                                <i className="far fa-circle" aria-hidden="true"></i>
-                                </span>
-                                &lt;br&gt; 
-                            </a>
-                            <a className="panel-block is-active">
-                                <span className="panel-icon">
-                                <i className="far fa-circle" aria-hidden="true"></i>
-                                </span>
-                                &lt;strong&gt; 
-                            </a>
-                            <a className="panel-block is-active">
-                                <span className="panel-icon">
-                                <i className="far fa-circle" aria-hidden="true"></i>
-                                </span>
-                                &lt;em&gt; 
-                            </a>
-                        </nav>
-                    </div>
-
-                    <div className="container">
-                        <progress className="progress" value="15" max="100">15%</progress>
-                    </div>
-
                     <div className="container">
                         <div className="columns">
                             <div className="column is-12">

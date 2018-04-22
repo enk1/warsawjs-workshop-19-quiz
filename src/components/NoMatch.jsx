@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-class Score extends Component {
+class NoMatch extends Component {
     render() {
         return (
-            <div>Score</div>
+            <div>NoMatch</div>
         );
     }
 }
 
-export default Score;
+export default NoMatch;
