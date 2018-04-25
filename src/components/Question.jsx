@@ -16,6 +16,7 @@ class Question extends Component {
 	}
 
 	saveAnswer(i) {
+		i--;
 		this.setState({ userAnswer: i });
 	}
 	checkUserAnswer() {
