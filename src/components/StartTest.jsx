@@ -2,23 +2,36 @@ import React, { Component } from "react";
 import "./StartTest.css";
 
 class StartTest extends Component {
+	startQuiz() {
+		return "/quiz/1";
+	}
+
 	render() {
 		return (
-			<div className="columns">
-				<div className="column is-12">
-					<div className="container">
-						<section className="hero is-info">
-							<div className="title is-bold">HTML Test</div>
-							<div className="subtitle">
-								Weź udział w supertrudnym teście z HTML-a!
+			<section class="hero is-info is-fullheight">
+				<div class="hero-body">
+					<div class="container">
+						<div class="columns">
+							<div class="column is-half set-align">
+								<h1 className="title is-bold">HTML Test</h1>
+								<h2 className="subtitle">
+									Weź udział w supertrudnym teście z HTML-a!
+								</h2>
 							</div>
-							<div className="button-container">
-								<a class="button is-info is-inverted">Test</a>
+							<div class="column is-half set-align">
+								<div className="button-container">
+									<a
+										className="button is-info is-inverted is-large"
+										href={this.startQuiz()}
+									>
+										Start
+									</a>
+								</div>
 							</div>
-						</section>
+						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		);
 	}
 }

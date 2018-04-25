@@ -8,7 +8,7 @@ import Quiz from "./components/Quiz";
 
 ReactDOM.render(
 	<Router>
-		<div className="hero is-info set-clear">
+		<div>
 			<Route exact path="/" component={StartTest} />
 			<Route path="/score" component={Score} />
 			<Route path="/quiz/:questionNumber" component={Quiz} />

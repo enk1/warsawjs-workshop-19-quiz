@@ -28,12 +28,8 @@ class Quiz extends Component {
 					<div className="container">
 						<section className="hero is-primary">
 							<div className="hero-body">
-								<div className="container">
-									<h1 className="title">Quiz</h1>
-									<h2 className="subtitle">
-										Z wiedzy o HTML
-									</h2>
-								</div>
+								<h1 className="title">Quiz</h1>
+								<h2 className="subtitle">Z wiedzy o HTML</h2>
 							</div>
 						</section>
 					</div>
