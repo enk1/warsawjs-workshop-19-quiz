@@ -26,7 +26,7 @@ class Quiz extends Component {
 			<div className="columns">
 				<div className="column is-12">
 					<div className="container">
-						<section className="hero is-primary">
+						<section className="hero is-info">
 							<div className="hero-body">
 								<h1 className="title">Quiz</h1>
 								<h2 className="subtitle">Z wiedzy o HTML</h2>
@@ -49,7 +49,7 @@ class Quiz extends Component {
 									<span>Wróć</span>
 								</a>
 								<a
-									className="button is-pulled-right is-primary"
+									className="button is-pulled-right is-info"
 									href={this.increment(questionNumber)}
 								>
 									<span>Dalej</span>

@@ -5,31 +5,34 @@ import ProgressBar from "./ProgressBar";
 class Question extends Component {
 	constructor(props) {
 		super(props);
+
 		this.state = {
-			first: 0,
-			second: 0,
-			third: 0,
-			fourth: 0
+			userAnswer: 0,
+			showResults: false
 		};
-		this.rememberAnswer = this.rememberAnswer.bind(this);
+		this.saveAnswer = this.saveAnswer.bind(this);
+		this.showUserAnswer = this.showUserAnswer.bind(this);
+		this.checkUserAnswer = this.checkUserAnswer.bind(this);
 	}
 
-	rememberAnswer(questionNumber, i) {
-		switch (questionNumber) {
-			case 1:
-				this.setState({ first: i });
-				break;
-			case 2:
-				this.setState({ second: i });
-				break;
-			case 3:
-				this.setState({ third: i });
-				break;
-			case 4:
-				this.setState({ fourth: i });
-				break;
+	saveAnswer(i) {
+		this.setState({ userAnswer: i });
+	}
+	checkUserAnswer() {
+		this.setState({ showResults: true });
+		//this.showUserAnswer();
+	}
+
+	showUserAnswer(questionNumber) {
+		if (this.state.userAnswer === questions[questionNumber].answer) {
+			return `Super`;
+		} else {
+			return `Prawidłowa odpowiedź to ${
+				questions[questionNumber].answer
+			}`;
 		}
 	}
+
 	render() {
 		const questionNumber = this.props.questions.replace(/\D/g, "");
 		const questionContent = questions[questionNumber - 1];
@@ -43,9 +46,7 @@ class Question extends Component {
 						return (
 							<a
 								key={i}
-								onClick={() =>
-									this.rememberAnswer(questionNumber, i)
-								}
+								onClick={() => this.saveAnswer(i)}
 								className="panel-block is-active"
 							>
 								<span className="panel-icon">
@@ -58,6 +59,15 @@ class Question extends Component {
 							</a>
 						);
 					})}
+
+					<a className="button" onClick={this.checkUserAnswer}>
+						Sprawdź
+					</a>
+					<div class="hero is-success">
+						{this.state.showResults
+							? this.showUserAnswer(questionNumber)
+							: null}
+					</div>
 
 					<div className="container">
 						<ProgressBar perc={questionNumber} />
