@@ -6,9 +6,9 @@ import Question from "./Question";
 class Quiz extends Component {
 	decrement(pageNumber) {
 		if (pageNumber > 1) {
-			return `/quiz/${pageNumber - 1}`;
+			return process.env.PUBLIC_URL + `/quiz/${pageNumber - 1}`;
 		} else {
-			return `/quiz/${4}`;
+			return process.env.PUBLIC_URL +`/quiz/${4}`;
 		}
 	}
 	increment(pageNumber) {

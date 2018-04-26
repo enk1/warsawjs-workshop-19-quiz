@@ -3,7 +3,7 @@ import "./StartTest.css";
 
 class StartTest extends Component {
 	startQuiz() {
-		return "/quiz/1";
+		return process.env.PUBLIC_URL +"/quiz/1";
 	}
 
 	render() {
