@@ -1,7 +1,7 @@
 {
 	"name": "warsawjs-workshop-19-quiz",
 	"version": "0.1.0",
-	"homepage": "https://enk1.github.io/warsawjs-workshop-19-quiz/startTest",
+	"homepage": "https://enk1.github.io/warsawjs-workshop-19-quiz/",
 	"private": true,
 	"dependencies": {
 		"font-awesome": "^4.7.0",

@@ -9,7 +9,7 @@ import Quiz from "./components/Quiz";
 ReactDOM.render(
 	<Router>
 		<div>
-			<Route exact path="/" component={StartTest} />
+			<Route exact path={process.env.PUBLIC_URL +"/"} component={StartTest} />
 			<Route path="/score" component={Score} />
 			<Route path="/quiz/:questionNumber" component={Quiz} />
 			{/* <Route component={NoMatch} /> */}
