@@ -8,17 +8,17 @@ class StartTest extends Component {
 
 	render() {
 		return (
-			<section class="hero is-info is-fullheight">
-				<div class="hero-body">
-					<div class="container">
-						<div class="columns">
-							<div class="column is-half set-align">
+			<section className="hero is-info is-fullheight">
+				<div className="hero-body">
+					<div className="container">
+						<div className="columns">
+							<div className="column is-half set-align">
 								<h1 className="title is-bold">HTML Test</h1>
 								<h2 className="subtitle">
 									Weź udział w supertrudnym teście z HTML-a!
 								</h2>
 							</div>
-							<div class="column is-half set-align">
+							<div className="column is-half set-align">
 								<div className="button-container">
 									<a
 										className="button is-info is-inverted is-large"

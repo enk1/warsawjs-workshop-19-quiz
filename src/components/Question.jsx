@@ -64,7 +64,7 @@ class Question extends Component {
 					<a className="button" onClick={this.checkUserAnswer}>
 						Sprawdź
 					</a>
-					<div class="hero is-success">
+					<div className="hero is-success">
 						{this.state.showResults
 							? this.showUserAnswer(questionNumber)
 							: null}
